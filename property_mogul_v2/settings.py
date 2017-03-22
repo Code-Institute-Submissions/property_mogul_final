@@ -25,14 +25,16 @@ SECRET_KEY = '!g&fmt__a@)dv$5y73(+&w3n9k=kj($v54((@7_w-m2=%3q)ea'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+PAYPAL_NOTIFY_URL = 'http://da4abb68.ngrok.io/a-really-hard-to-guess-url/'
+
+ALLOWED_HOSTS = ['127.0.0.1', 'http://da4abb68.ngrok.io/', 'localhost']
 
 
 AUTH_USER_MODEL = 'members.User'
 
 
 AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend',
+    # 'django.contrib.auth.backends.ModelBackend',
     'members.backends.EmailAuth',
 )
 
@@ -51,6 +53,7 @@ INSTALLED_APPS = [
     'django_forms_bootstrap',
     'paypal.standard.ipn',
     'products',
+    'houses',
 ]
 
 MIDDLEWARE = [
@@ -145,7 +148,7 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_lBEnGIqQGKUW4nXQh05GkxLE')
 
 
 SITE_URL = 'http://127.0.0.1:8000'
-PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-really-hard-to-guess-url/'
+# PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-really-hard-to-guess-url/'
 PAYPAL_RECEIVER_EMAIL = 'property.mogul@invest.com'
 
 

@@ -21,6 +21,7 @@ from paypal.standard.ipn import urls as paypal_urls
 from paypal_store import views as paypal_views
 from .settings import MEDIA_ROOT
 from products import views as product_views
+from houses import views as house_views
 from django.views.static import serve
 
 
@@ -38,5 +39,6 @@ urlpatterns = [
     url(r'^paypal-return', paypal_views.paypal_return),
     url(r'^paypal-cancel', paypal_views.paypal_cancel),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
-    url(r'^products/$', product_views.all_products)
+    url(r'^products/$', product_views.all_products),
+    url(r'^houses/$', house_views.all_houses),
 ]

@@ -6,10 +6,10 @@
     <h3>Your investment of ${{ post.payment_gross }} will be paid to {{ post.business }}<h4>
         <h4><strong>Your payment status is:</strong> {{ post.payment_status }}</h4>
 
-{#    <h2>POST</h2>#}
-{#    {{ post }}#}
-{##}
-{#    <h2>GET TEST</h2>#}
-{#        <p>So far you have invested in {{ get.item_name }}</p>#}
-{#        {{ get }}#}
+    <h2>POST</h2>
+    {{ post }}
+
+    <h2>GET TEST</h2>
+        <p>So far you have invested in {{ get.item_name }}</p>
+        {{ get }}
 {% endblock %}
