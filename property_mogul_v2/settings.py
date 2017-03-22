@@ -32,7 +32,7 @@ AUTH_USER_MODEL = 'members.User'
 
 
 AUTHENTICATION_BACKENDS = (
-    # 'django.contrib.auth.backends.ModelBackend',
+    'django.contrib.auth.backends.ModelBackend',
     'members.backends.EmailAuth',
 )
 
@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'home',
     'members',
     'django_forms_bootstrap',
+    'paypal.standard.ipn',
+    'products',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +142,12 @@ STATICFILES_DIRS = (
 # Stripe environment variables
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_jMrqEWUObXQYcsowwHCjDJ2E')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_lBEnGIqQGKUW4nXQh05GkxLE')
+
+
+SITE_URL = 'http://127.0.0.1:8000'
+PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-really-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = 'property.mogul@invest.com'
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
