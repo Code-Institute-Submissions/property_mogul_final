@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Subscription for {{ user.email }} has been successfully cancelled!</h2>
+    <p>We are sorry to see you go</p>
+    <p>Your stripe id is {{ user.stripe_id }} </p>
+    <h3>All of your investments plus profits made to date will be returned to your nominated bank account
+    within two working days</h3>
+
+{% endblock %}
