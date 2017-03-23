@@ -57,6 +57,9 @@ INSTALLED_APPS = [
     'blog',
     'django.contrib.sites',
     'disqus',
+    'tinymce',
+    'emoticons',
+    'threads',
 ]
 
 MIDDLEWARE = [
@@ -89,6 +92,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'property_mogul_v2.wsgi.application'
+
+
+INTERNAL_IPS = ('127.0.0.1',)
 
 
 # Database
@@ -139,6 +145,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = ''
 
 STATICFILES_DIRS = (
    os.path.join(BASE_DIR, "static"),
@@ -161,3 +168,7 @@ MEDIA_URL = '/media/'
 
 DISQUS_WEBSITE_SHORTNAME = 'BlogApp'
 SITE_ID = 1
+
+
+# tinymce settings
+TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')

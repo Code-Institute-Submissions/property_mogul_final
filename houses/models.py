@@ -16,7 +16,7 @@ class House(models.Model):
 class Purchase(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='purchases')
     house = models.ForeignKey(House)
-    subscription_end = models.DateTimeField(default=timezone.now())
+    subscription_end = models.DateTimeField(default=timezone.now)
 
 
 from signals import subscription_created, subscription_was_cancelled

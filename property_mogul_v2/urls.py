@@ -23,6 +23,7 @@ from .settings import MEDIA_ROOT
 from products import views as product_views
 from houses import views as house_views
 from django.views.static import serve
+from threads import views as forum_views
 
 
 urlpatterns = [
@@ -42,4 +43,16 @@ urlpatterns = [
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
     url(r'^products/$', product_views.all_products),
     url(r'^houses/$', house_views.all_houses),
+
+# Forum URLs
+    url(r'^forum/$', forum_views.forum),
+    url(r'^threads/(?P<subject_id>\d+)/$', forum_views.threads, name='threads'),
+    url(r'^new_thread/(?P<subject_id>\d+)/$', forum_views.new_thread, name='new_thread'),
+    url(r'^thread/(?P<thread_id>\d+)/$', forum_views.thread, name='thread'),
+    url(r'^post/new/(?P<thread_id>\d+)/$', forum_views.new_post, name='new_post'),
+    url(r'^post/edit/(?P<thread_id>\d+)/$', forum_views.edit_post, name='edit_post'),
+    url(r'^post/delete/(?P<thread_id>\d+)/(?P<post_id>\d+)/$',
+        forum_views.delete_post, name='delete_post'),
+    url(r'^thread/vote/(?P<thread_id>\d+)/(?P<subject_id>\d+)/$',
+        forum_views.thread_vote, name='cast_vote'),
 ]
