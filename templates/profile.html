@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <h2>Success!</h2>
-    <p>You are logged in as {{ user.email }} </p>
+    <p>You are logged in as {{ user.first_name }} </p>
     <p>Your stripe id is {{ user.stripe_id }} </p>
     <h2>Subscription Details</h2>
     <p>You have {{ user.subscription_end|timeuntil}} left on your subscription</p>

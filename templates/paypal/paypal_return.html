@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
     <P><strong>Invoice no.:</strong> {{ post.invoice }}</P>
-    <h1>Congratulations {{ post.first_name }} you have invested in a {{ post.item_name }} :)</h1>
+    <h1>Congratulations {{ post.first_name }} you have successfully purchased '{{ post.item_name }}'</h1>
 
-    <h3>Your investment of ${{ post.payment_gross }} will be paid to {{ post.business }}<h4>
+    <h3>${{ post.payment_gross }} has been paid to {{ post.business }}<h4>
         <h4><strong>Your payment status is:</strong> {{ post.payment_status }}</h4>
 
     <h2>POST</h2>

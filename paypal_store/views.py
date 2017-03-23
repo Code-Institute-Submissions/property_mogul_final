@@ -4,6 +4,8 @@ from django.shortcuts import render
 
 @csrf_exempt
 def paypal_return(request):
+    print request.POST
+    print request.GET
     args = {'post': request.POST, 'get': request.GET}
     return render(request, 'paypal/paypal_return.html', args)
 

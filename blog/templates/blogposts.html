@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="masthead">
+    <div class="container">
+        <div class="row">
+                <h1> property mogul
+                    <p id="logo" class="lead">the trials of crowd-funding property investment</p>
+                </h1>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel">
+                <div class="panel-body">
+                    {% for post in posts %}
+        <div class="row">
+            <hr>
+            <div class="col-md-2 col-sm-3 text-center">
+                <a class="story-img" href="#">
+                    <img src="https://media.giphy.com/media/Uw3OaEni1Giek/giphy.gif"
+                         style="width:100px;
+                         height: 100px;
+                         background-color: #12ABB2;
+                         color: #ffffff;"
+                         class="img-circle">
+                </a>
+            </div>
+            <div class="col-md-10 col-sm-9">
+                <h3>{{ post.title }}</h3>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <p>{{ post.content | truncatewords:20 }}</p>
+                        <p><button class="btn btn-default" onclick="location.href={{ post.id }}">Read More</button></p>
+                        {{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong>
+                        {{ post.tag }}
+                        <p><button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">
+                            New Post</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

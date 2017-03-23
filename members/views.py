@@ -37,6 +37,7 @@ def register(request):
                 user.save()
 
                 if user:
+                    user.backend = "members.backends.EmailAuth"
                     auth.login(request, user)
                     messages.success(request, "You have successfully registered")
                     return redirect(reverse('profile'))
@@ -72,6 +73,7 @@ def login(request):
                                      password=request.POST.get('password'))
 
             if user is not None:
+                user.backend = "members.backends.EmailAuth"
                 auth.login(request, user)
                 messages.error(request, "You have successfully logged in")
                 return redirect(reverse('profile'))

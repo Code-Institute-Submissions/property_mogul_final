@@ -26,7 +26,8 @@ from django.views.static import serve
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'', include('blog.urls')),
     url(r'^$', home_views.get_index, name='index'),
     url(r'^register/$', members_views.register, name='register'),
     url(r'^profile/$', members_views.profile, name='profile'),
