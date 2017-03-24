@@ -6,8 +6,8 @@ from django.template.context_processors import csrf
 from django.forms import formset_factory
 from threads.models import Subject, Post, Thread
 from .forms import ThreadForm, PostForm
-# from polls.forms import PollSubjectForm, PollForm
-# from polls.models import PollSubject
+from polls.forms import PollSubjectForm, PollForm
+from polls.models import PollSubject
 
 
 def forum(request):
