@@ -34,13 +34,18 @@ urlpatterns = [
     url(r'^profile/$', members_views.profile, name='profile'),
     url(r'^login/$', members_views.login, name='login'),
     url(r'^logout/$', members_views.logout, name='logout'),
+
     url(r'^cancel_subscription/$', members_views.cancel_subscription, name='cancel_subscription'),
     url(r'^cancelled/$', members_views.cancel, name='cancel'),
     url(r'^subscriptions_webhook/$', members_views.subscriptions_webhook, name='subscriptions_webhook'),
+
     url(r'^a-really-hard-to-guess-url/', include(paypal_urls)),
     url(r'^paypal-return', paypal_views.paypal_return),
     url(r'^paypal-cancel', paypal_views.paypal_cancel),
+    url(r'^paypal/', include('paypal.standard.ipn.urls')),
+
     url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
+
     url(r'^products/$', product_views.all_products),
     url(r'^houses/$', house_views.all_houses),
 
