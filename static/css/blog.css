@@ -5,6 +5,7 @@
 body {
     font-family: Arial;
     padding-top: 50px;
+    background-color: #eb79b5;
 }
 
 footer {
@@ -15,7 +16,7 @@ footer {
 }
 
 h1, h1 a {
-    color: #555555;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -42,7 +43,7 @@ h1, h1 a {
 }
 
 #logo {
-    color: #12AB82;
+    color: #31004f;
 }
 
 .story-img {

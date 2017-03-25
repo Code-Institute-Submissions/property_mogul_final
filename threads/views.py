@@ -15,6 +15,11 @@ def forum(request):
                   {'subjects': Subject.objects.all()})
 
 
+def post(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    return render(request, 'forum/post.html')
+
+
 def threads(request, subject_id):
     subject = get_object_or_404(Subject, pk=subject_id)
     return render(request, 'forum/threads.html', {'subject': subject})

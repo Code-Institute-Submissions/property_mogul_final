@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 {% load threads_extras %}
 {% load staticfiles %}
+{% load emoticons_tags %}
+
 {% block content %}
     <div class="row header">
         <div class="container">
-            <h2>{{ thread.name }}</h2>
+            <h2><strong>Subject: </strong></h2>
+            <h3>{{ thread.name }}</h3>
             <div class="col-md-12">
                 <table class="table">
                     <tbody>
@@ -19,11 +22,24 @@
                                     {{ thread.created_at | started_time }}
                                 </time>
                             </td>
-                            <td>{{ thread.user.username }}</td>
+                            <td>{{ thread.user.first_name }}</td>
                             <td>{% last_posted_user_name thread %}</td>
                         </tr>
                     </tbody>
                 </table>
+                <section class="row comment col-md-9">
+    <div class="col-md-3 comment-profile">
+{#        <p><img src="{% static 'images/user.png' %}"></p>#}
+        <h2>{{ post.user.username }}</h2>
+        <p>{{ post.user.posts.count }} POSTS</p>
+    </div>
+    <div class="col-md-9">
+        <div class="comment-content">
+            {% autoescape off %}{{ post.comment|emoticons }}{% endautoescape %}
+        </div>
+{#        {% include "forum/comment_details.html" %}#}
+    </div>
+</section>
             </div>
             {% if thread.poll %}
                 <div class="container">
@@ -56,6 +72,7 @@
                 <p>
                     <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New post</a>
                 </p>
+
             {% endif %}
         </div>
     </div>

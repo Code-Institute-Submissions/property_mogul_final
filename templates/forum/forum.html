@@ -5,7 +5,10 @@
 
     {% for subject in subjects %}
         <section class="subject">
+            <h1>THREAD</h1>
             <h2><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
+            <hr>
+            <h1>Description</h1>
             <p>
                 <a href="{% url 'threads' subject.id %}">
                     {% autoescape off %}
