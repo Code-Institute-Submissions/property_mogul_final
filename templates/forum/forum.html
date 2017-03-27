@@ -3,29 +3,23 @@
 {% block content %}
     {% load bootstrap_tags %}
 
+    <h1>Hi {{ user.first_name }}!  Welcome to the Property Mogul Forum section</h1>
+    <p>Click on a Forum main subject below and get involved</p>
+    <p>Features comments section and polls for members to vote on important decisions</p>
     {% for subject in subjects %}
         <section class="subject">
-            <h1>THREAD</h1>
+            <div class="jumbotron">
             <h2><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
-            <hr>
-            <h1>Description</h1>
             <p>
-                <a href="{% url 'threads' subject.id %}">
+
                     {% autoescape off %}
                         {{ subject.description }}
                     {% endautoescape %}
-                </a>
+
             </p>
-        <table>
-            <tr>
-                <th>THREADS</th>
-                <th>POSTS</th>
-            </tr>
-            <tr>
-                <td>{{ subject.threads.count }}</td>
-                <td>{{ subject|get_total_subject_posts }}</td>
-            </tr>
-        </table>
+
+            <strong>THREADS</strong> {{ subject.threads.count }} | <strong>POSTS</strong> {{ subject|get_total_subject_posts }}
+            </div>
         </section>
     {% endfor %}
 {% endblock %}

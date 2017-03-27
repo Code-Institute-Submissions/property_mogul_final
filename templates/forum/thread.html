@@ -6,7 +6,7 @@
 {% block content %}
     <div class="row header">
         <div class="container">
-            <h2><strong>Subject: </strong></h2>
+            <h2><strong>Thread: </strong></h2>
             <h3>{{ thread.name }}</h3>
             <div class="col-md-12">
                 <table class="table">
@@ -27,20 +27,28 @@
                         </tr>
                     </tbody>
                 </table>
-                <section class="row comment col-md-9">
-    <div class="col-md-3 comment-profile">
-{#        <p><img src="{% static 'images/user.png' %}"></p>#}
-        <h2>{{ post.user.username }}</h2>
-        <p>{{ post.user.posts.count }} POSTS</p>
-    </div>
-    <div class="col-md-9">
-        <div class="comment-content">
-            {% autoescape off %}{{ post.comment|emoticons }}{% endautoescape %}
-        </div>
-{#        {% include "forum/comment_details.html" %}#}
-    </div>
-</section>
             </div>
+    <section class="row comment col-md-9">
+        <div class="col-md-3 comment-profile">
+            <div class="container">
+                {% for post in thread.posts.all %}
+                    <h5>Member: {{ post.user.first_name }}</h5>
+                    <h6>{{ post.user.posts.count }} POSTS</h6>
+                    <p>{{ post.comment | emoticons}}</p>
+
+                {% endfor %}
+
+
+            {% if user.is_authenticated %}
+                <div>
+                <p>
+                    <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">Add Post</a>
+                </p>
+                </div>
+        </div>
+            {% endif %}
+        </div>
+    </section>
             {% if thread.poll %}
                 <div class="container">
                     <div class="col-md-6">
@@ -68,13 +76,12 @@
                 </div>
             {% endif %}
 
-            {% if user.is_authenticated %}
-                <p>
-                    <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New post</a>
+<p>
+{#                    <a href="{% url 'forum' %}" class="btn btn-primary">Return To Forum</a>#}
+                    <a href="/forum/" class="btn btn-primary">Return To Forum</a>
                 </p>
-
-            {% endif %}
         </div>
     </div>
+
 
 {% endblock %}
