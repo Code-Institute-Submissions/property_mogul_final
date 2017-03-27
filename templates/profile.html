@@ -3,6 +3,10 @@
     <h2>Success!</h2>
     <p>You are logged in as {{ user.first_name }} </p>
     <p>Your stripe id is {{ user.stripe_id }} </p>
+    {% if user.image %}
+        <img src="/media/{{ user.image }}" style="height: 100px; width: 100px">
+    {% endif %}
+
     <h2>Subscription Details</h2>
     <p>You have {{ user.subscription_end|timeuntil}} left on your subscription</p>
     <p>To cancel your subscription click 'Cancel Subscription' below</p>

@@ -4,7 +4,7 @@ from django.utils import timezone
 
 
 class AccountUserManager(UserManager):
-    def _create_user(self, first_name, username, email, password, is_staff, is_superuser, **extra_fields):
+    def _create_user(self, first_name, username, email, password, is_staff, is_superuser, image, **extra_fields):
         """
        Creates and saves a User with the given username, email and password.
        """
@@ -15,8 +15,9 @@ class AccountUserManager(UserManager):
         email = self.normalize_email(email)
         user = self.model(first_name=first_name, username=email, email=email,
                           is_staff=is_staff, is_active=True,
-                          is_superuser=is_superuser,
+                          is_superuser=is_superuser, image=image,
                           date_joined=now, **extra_fields)
+
         user.set_password(password)
         user.save(using=self._db)
 
@@ -30,6 +31,7 @@ class User(AbstractUser):
     # in later units we'll be adding things like payment details!
     stripe_id = models.CharField(max_length=40, default='')
     subscription_end = models.DateTimeField(default=timezone.now)
+    image = models.ImageField(upload_to="images", blank=True, null=True)
     objects = AccountUserManager()
 
     def is_subscribed(self, house):
