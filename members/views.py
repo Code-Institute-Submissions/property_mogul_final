@@ -18,7 +18,7 @@ stripe.api_key = settings.STRIPE_SECRET
 
 def register(request):
     if request.method == 'POST':
-        form = UserRegistrationForm(request.POST)
+        form = UserRegistrationForm(request.POST, request.FILES)
         if form.is_valid():
             try:
                 customer = stripe.Customer.create(
@@ -91,7 +91,7 @@ def login(request):
 def logout(request):
     auth.logout(request)
     messages.success(request, 'You have successfully logged out')
-    return redirect(reverse('index'))
+    return redirect(reverse('home'))
 
 
 @login_required(login_url='/login/')

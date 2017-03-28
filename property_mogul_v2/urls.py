@@ -29,7 +29,8 @@ from threads import views as forum_views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'', include('blog.urls')),
-    url(r'^$', home_views.get_index, name='index'),
+    url(r'^$', home_views.home, name='home'),
+    url(r'^home/$', home_views.home, name='home'),
     url(r'^register/$', members_views.register, name='register'),
     url(r'^profile/$', members_views.profile, name='profile'),
     url(r'^login/$', members_views.login, name='login'),
@@ -61,4 +62,7 @@ urlpatterns = [
         forum_views.delete_post, name='delete_post'),
     url(r'^thread/vote/(?P<thread_id>\d+)/(?P<subject_id>\d+)/$',
         forum_views.thread_vote, name='cast_vote'),
+
+    url(r'^contact', home_views.get_contact),
+    url(r'^thanks', home_views.contact_thanks),
 ]

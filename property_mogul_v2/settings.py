@@ -174,3 +174,6 @@ SITE_ID = 1
 
 # tinymce settings
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

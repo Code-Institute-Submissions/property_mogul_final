@@ -8,6 +8,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <!-- Custom Google Web Font -->
+    <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS-->
+    <link href="{% static 'css/general.css' %}" rel="stylesheet">
+
+	 <!-- Owl-Carousel -->
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
+	<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<link href="{% static 'css/animate.css' %}" rel="stylesheet">
+
+	<!-- Magnific Popup core CSS file -->
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <script src="{% static 'js/modernizr-2.8.3.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
     <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
     <link rel="stylesheet" href="{% static 'css/font-awesome-4.7.0/css/font-awesome.css' %}">
 
@@ -21,14 +42,13 @@
 
     {% block head_js %}{% endblock %}
 </head>
-<body>
+<body id="home">
 <div class="container">
    <div class="masthead">
        <ul class="nav nav-pills pull-right">
            {% if user.is_authenticated %}
-               <li><a href="#">Home</a></li>
-               <li><a href="#">About</a></li>
-               <li><a href="#">Contact</a></li>
+
+               <li><a href="/contact/">Contact</a></li>
                <li><a href="/products/">Products</a></li>
                <li><a href="/houses/">Properties</a></li>
 
@@ -41,12 +61,28 @@
                             <li><a href="/blog/top">Top 5 Posts</a></li>
                             <li><a href="/post/new">New Post</a></li>
 					</ul>
-                </li>
+               </li>
 
-                <li><a href="/forum/">Forum</a></li>
-               <li><a href="{% url 'profile' %}">Profile</a></li>
-               <li><a href="{% url 'logout' %}">Log Out</a></li>
+               <li><a href="/forum/">Forum</a></li>
+
+
+               {% if user.image %}
+               <li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"><img src="/media/{{ user.image }}" style="height: 2em; width: 2em"><span class="caret"></span></a>
+					<ul class="dropdown-menu">
+
+                            <li><a href="{% url 'profile' %}">Signed in as {{ user.first_name }}</a></li>
+                            <li><a href="{% url 'logout' %}">Log Out</a></li>
+					</ul>
+               </li>
+                   {% else %}
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
+                    <li><a href="{% url 'logout' %}">Log Out</a></li>
+               {% endif %}
+
            {% else %}
+               <li><a href="{% url 'home' %}">Home</a></li>
                <li><a href="{% url 'register' %}">Register</a></li>
                <li><a href="{% url 'login' %}">Log In</a></li>
            {% endif %}
@@ -64,14 +100,18 @@
         </div>
     {% endif %}
 
-
-   <div class="container">
        {% block content %}
        {% endblock %}
-   </div>
    <hr>
    <div class="footer">
-       <p>Made By Fully Stacked Philly </p>
+        <p>Made By Fully Stacked Philly </p>
+        <h3>Social</h3>
+        <li class="social">
+        <a href="#"><i class="fa fa-facebook-square fa-size"> </i></a>
+        <a href="#"><i class="fa  fa-twitter-square fa-size"> </i> </a>
+        <a href="#"><i class="fa fa-google-plus-square fa-size"> </i></a>
+        <a href="#"><i class="fa fa-flickr fa-size"> </i> </a>
+        </li>
    </div>
 </div>
 </body>
@@ -80,4 +120,30 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js">
 </script>
+<!-- JavaScript -->
+    <script src="{% static 'js/jquery-1.10.2.js' %}"></script>
+{#    <script src="{% static 'js/bootstrap.js' %}"></script>#}
+	<script src="{% static 'js/owl.carousel.js' %}"></script>
+	<script src="{% static 'js/script.js' %}"></script>
+	<!-- StikyMenu -->
+	<script src="{% static 'js/stickUp.min.js' %}"></script>
+	<script type="text/javascript">
+	  jQuery(function($) {
+		$(document).ready( function() {
+		  $('.navbar-default').stickUp();
+
+		});
+	  });
+
+	</script>
+	<!-- Smoothscroll -->
+	<script type="text/javascript" src="{% static 'js/jquery.corner.js' %}"></script>
+	<script src="{% static 'js/wow.min.js' %}"></script>
+	<script>
+	 new WOW().init();
+	</script>
+	<script src="{% static 'js/classie.js' %}"></script>
+	<script src="{% static 'js/uiMorphingButton_inflow.js' %}"></script>
+	<!-- Magnific Popup core JS file -->
+	<script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
 </html>
