@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 <div id="masthead">
-    <div class="container">
+    <div class="jumbotron">
         <div class="row">
-                <h1> property mogul
+                <h1> blogul
                     <p id="logo" class="lead">the trials of crowd-funding property investment</p>
                 </h1>
         </div>
@@ -19,12 +19,9 @@
             <hr>
             <div class="col-md-2 col-sm-3 text-center">
                 <a class="story-img" href="#">
-                    <img src="https://media.giphy.com/media/Uw3OaEni1Giek/giphy.gif"
-                         style="width:100px;
-                         height: 100px;
-                         background-color: #12ABB2;
-                         color: #ffffff;"
-                         class="img-circle">
+                    {% if post.image %}
+                            <img src="/media/{{ post.image}}" style="height: 100px; width: 100px">
+                        {% endif %}
                 </a>
             </div>
             <div class="col-md-10 col-sm-9">

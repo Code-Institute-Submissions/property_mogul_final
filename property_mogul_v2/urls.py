@@ -24,6 +24,7 @@ from products import views as product_views
 from houses import views as house_views
 from django.views.static import serve
 from threads import views as forum_views
+from contact import views as contact_views
 
 
 urlpatterns = [
@@ -63,6 +64,6 @@ urlpatterns = [
     url(r'^thread/vote/(?P<thread_id>\d+)/(?P<subject_id>\d+)/$',
         forum_views.thread_vote, name='cast_vote'),
 
-    url(r'^contact', home_views.get_contact),
-    url(r'^thanks', home_views.contact_thanks),
+    url(r'^contact', contact_views.get_contact),
+    url(r'^thanks', contact_views.contact_thanks),
 ]

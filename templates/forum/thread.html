@@ -32,7 +32,10 @@
         <div class="col-md-3 comment-profile">
             <div class="container">
                 {% for post in thread.posts.all %}
-                    <h5>Member: {{ post.user.first_name }}</h5>
+                    <h5>Member: {{ post.user.first_name }}
+                    {% if post.user.image %}
+                    <img src="/media/{{ post.user.image }}" style="height: 2em; width: 2em">
+                    {% endif %}</h5>
                     <h6>{{ post.user.posts.count }} POSTS</h6>
                     <p>{{ post.comment | emoticons}}</p>
 
