@@ -40,12 +40,14 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
 
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+
     {% block head_js %}{% endblock %}
 </head>
-<body id="home">
-<div class="container">
+<body>
+<div class="container-fluid main">
    <div class="masthead">
-       <ul class="nav nav-pills pull-right">
+       <ul class="nav nav-pills pull-right fixed">
            {% if user.is_authenticated %}
 
                <li><a href="/contact/">Contact</a></li>
@@ -103,18 +105,17 @@
        {% block content %}
        {% endblock %}
    <hr>
-   <div class="footer">
+<div class="footer container-fluid">
         <p>Made By Fully Stacked Philly </p>
-        <h3>Social</h3>
+{#        <h3>Social</h3>#}
         <li class="social">
         <a href="#"><i class="fa fa-facebook-square fa-size"> </i></a>
         <a href="#"><i class="fa  fa-twitter-square fa-size"> </i> </a>
         <a href="#"><i class="fa fa-google-plus-square fa-size"> </i></a>
         <a href="#"><i class="fa fa-flickr fa-size"> </i> </a>
         </li>
-   </div>
 </div>
-</body>
+</div>
 
 <!-- script references -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
@@ -146,4 +147,6 @@
 	<script src="{% static 'js/uiMorphingButton_inflow.js' %}"></script>
 	<!-- Magnific Popup core JS file -->
 	<script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+
+</body>
 </html>
