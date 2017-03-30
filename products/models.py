@@ -15,8 +15,9 @@ class Product(models.Model):
         paypal_dict = {
             "business": settings.PAYPAL_RECEIVER_EMAIL,
             "amount": self.price,
-            "currency": "GBP",
+            "currency": "USD",
             "item_name": self.name,
+            "image": self.image,
             "invoice": "%s-%s" % (self.pk, uuid.uuid4()),
             "notify_url": settings.PAYPAL_NOTIFY_URL,
             "return_url": "%s/paypal-return" % settings.SITE_URL,

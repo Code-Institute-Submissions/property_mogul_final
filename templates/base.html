@@ -48,31 +48,42 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
 <div class="container-fluid">
 <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" href="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+      			</button>
       <a class="navbar-brand" href="#">property mogul</a>
     </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav navbar-right">
-{#      <li class="active"><a href="#">Home</a></li>#}
-{#      <li><a href="#">Page 1</a></li>#}
-{#      <li><a href="#">Page 2</a></li>#}
-{#      <li><a href="#">Page 3</a></li>#}
-{#    </ul>#}
 
 {#   <div class="masthead">#}
 {#       <ul class="nav nav-pills pull-right fixed">#}
            {% if user.is_authenticated %}
 
                <li><a href="/contact/">Contact</a></li>
-               <li><a href="/products/">Products</a></li>
-               <li><a href="/houses/">Properties</a></li>
+
+               <li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Investment Centre <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+
+                       <li><a href="/products/">One Off</a></li>
+                       <li><a href="/houses/">Monthly</a></li>
+
+                    </ul>
+               </li>
+
 
                <li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Blog <span class="caret"></span></a>
 					<ul class="dropdown-menu">
 
-						    <li><a href="/blog/">All Posts</a></li>
-                            <li><a href="/blog/top">Top 5 Posts</a></li>
-                            <li><a href="/post/new">New Post</a></li>
+                        <li><a href="/blog/">All Posts</a></li>
+                        <li><a href="/blog/top">Top 5 Posts</a></li>
+                        <li><a href="/post/new">New Post</a></li>
 					</ul>
                </li>
 
@@ -102,6 +113,7 @@
     </ul>
 {#       <h1><span class="fui-settings-16 muted">property mogul</span></h1>#}
    </div>
+</div>
 </nav>
 <div class="container-fluid main">
 

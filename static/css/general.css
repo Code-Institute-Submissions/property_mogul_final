@@ -43,6 +43,11 @@ body {
 	padding: 90px 0;
 }
 
+.contact_style {
+	padding: 20px;
+	margin: 20px;
+}
+
 .descp{
 	margin: 0;
 	padding: 0;
@@ -286,6 +291,7 @@ div.transbox {
     height: 100%;
     margin-top: -50px;
     background-color: #ffffff;
+	padding: 25px;
     /*border: 1px solid black;*/
     opacity: 0.9;
     filter: alpha(opacity=60); /* For IE8 and earlier */
@@ -294,6 +300,14 @@ div.transbox {
 div.transbox p {
     margin: 5%;
     font-weight: bold;
+}
+
+div.return {
+	height: 300px;
+	width: 300px;
+	/*padding-bottom: 50px;*/
+	background: url(../img/myst_lady.gif) no-repeat center center;
+	background-size: cover;
 }
 
 .intro-message {

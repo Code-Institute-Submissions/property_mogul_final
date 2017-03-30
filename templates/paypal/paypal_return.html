@@ -3,13 +3,11 @@
     <P><strong>Invoice no.:</strong> {{ post.invoice }}</P>
     <h1>Congratulations {{ post.first_name }} you have successfully purchased '{{ post.item_name }}'</h1>
 
-    <h3>${{ post.payment_gross }} has been paid to {{ post.business }}<h4>
+
+    <h3>${{ post.payment_gross }} has been paid to {{ post.business }}<h3>
         <h4><strong>Your payment status is:</strong> {{ post.payment_status }}</h4>
 
-    <h2>POST</h2>
-    {{ post }}
-
-    <h2>GET TEST</h2>
-        <p>So far you have invested in {{ get.item_name }}</p>
-        {{ get }}
+<div class="content-section-c return">
+        </div>
+</div>
 {% endblock %}

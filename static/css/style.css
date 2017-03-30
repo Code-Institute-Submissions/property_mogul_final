@@ -1978,10 +1978,10 @@ fieldset[disabled] .input-group-btn .btn-default.active {
 .navbar-toggle {
   border: none;
   color: #34495e;
-  margin: 0 0 0 21px;
-  padding: 0 21px;
-  height: 53px;
-  line-height: 53px;
+  /*margin-bottom: 5px;*/
+  padding: 0;
+  height: 40px;
+  line-height: 10px;
 }
 .navbar-toggle:before {
   color: #34495e;

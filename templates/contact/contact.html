@@ -4,21 +4,21 @@
 
     <div class="contact_page">
 
+        <div class="contact_style">
+                <div class="row">
 
-            <div class="row">
-
-                <div class="col-xs-6">
-                    <div class="transbox">
-                        <strong><h2>Contact us here and we'll be right back</h2></strong>
-                            <strong><form method="post">
-                                {% csrf_token %}
-                                {{ form | as_bootstrap }}
-                                <input type="submit" value="Submit" class="btn wow tada btn-embossed btn-primary"/>
-                            </form></strong>
+                    <div class="col-xs-6">
+                        <div class="transbox">
+                            <strong><h2>Contact us here and we'll be right back</h2></strong>
+                                <strong><form method="post">
+                                    {% csrf_token %}
+                                    {{ form | as_bootstrap }}
+                                    <input type="submit" value="Submit" class="btn wow tada btn-embossed btn-primary"/>
+                                </form></strong>
+                        </div>
                     </div>
                 </div>
-            </div>
-    </div>
+        </div>
 
 			<hr class="featurette-divider hidden-lg">
 				<div class="col-md-5 col-md-push-1 address">
@@ -33,40 +33,34 @@
 					Fax: XXX-XXX-YYYY</p>
 					</address>
 
-					<h3>Social</h3>
-					<li class="social">
-					<a href="#"><i class="fa fa-facebook-square fa-size"> </i></a>
-					<a href="#"><i class="fa  fa-twitter-square fa-size"> </i> </a>
-					<a href="#"><i class="fa fa-google-plus-square fa-size"> </i></a>
-					<a href="#"><i class="fa fa-flickr fa-size"> </i> </a>
-					</li>
 				</div>
-    <div  class="content-section-c ">
-		<div class="container">
-			<div class="row">
-			<div class="col-md-6 col-md-offset-3 text-center white">
-				<h2>Get Live Updates</h2>
-				<p class="lead" style="margin-top:0">A special thanks to Philip.</p>
-			 </div>
-			<div class="col-md-6 col-md-offset-3 text-center">
-				<div class="mockup-content">
-						<div class="morph-button wow pulse morph-button-inflow morph-button-inflow-1">
-							<button type="button "><span>Subscribe to our Newsletter</span></button>
-							<div class="morph-content">
-								<div>
-									<div class="content-style-form content-style-form-4 ">
-										<h2 class="morph-clone">Subscribe to our Newsletter</h2>
-										<form>
-											<p><label>Your Email Address</label><input type="text"/></p>
-											<p><button>Subscribe me</button></p>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-				</div>
-			</div>
-			</div>>
-		</div>
-	</div>
+        <div  class="content-section-c ">
+            <div class="container">
+                <div class="row">
+    {#			<div class="col-md-6 col-md-offset-3 text-center white">#}
+    {#				<h2>Get Live Updates</h2>#}
+    {#				<p class="lead" style="margin-top:0">A special thanks to Philip.</p>#}
+    {#			 </div>#}
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <div class="mockup-content">
+                            <div class="morph-button wow pulse morph-button-inflow morph-button-inflow-1">
+                                <button type="button "><span>Subscribe to our Newsletter</span></button>
+                                <div class="morph-content">
+                                    <div>
+                                        <div class="content-style-form content-style-form-4 ">
+                                            <h2 class="morph-clone">Subscribe to our Newsletter</h2>
+                                            <form>
+                                                <p><label>Your Email Address</label><input type="text"/></p>
+                                                <p><button>Subscribe me</button></p>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                </div>>
+            </div>
+        </div>
+    </div>
 {% endblock %}
