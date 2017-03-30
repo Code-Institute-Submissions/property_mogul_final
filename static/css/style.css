@@ -223,10 +223,10 @@ you can use the generic selector below, but it's slower:
 body {
 	height: 100%;
 	width: 100%;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.72222;
-  color: #34495e;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.72222;
+    color: #34495e;
   /*background-color: #ffffff;*/
 }
 a {

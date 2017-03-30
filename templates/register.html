@@ -13,16 +13,30 @@
 {% endblock %}
 
 {% block content %}
-  <form role="form" method="post" id="register-form" enctype="multipart/form-data" action="{% url 'register' %}">
-    <div id="credit-card-errors" style="display:none">
-      <div class="alert-message block-message error" id="stripe-error-message"></div>
+    <div class="content-section-a wow bounceInUp">
+        <h2>For just <strong>€9.99 per Month</strong> you gain exclusive access to our Members section including the Investment Centre,
+                the Blog and the Members Forum</h2>
+                        <h2 style="color: red;"><strong>In Test Mode</strong> use:</h2>
+                        <h4><strong>Credit Card Number: </strong>4242 4242 4242 4242 4242</h4>
+                        <h4><strong>CVN: </strong>Any 3 numbers</h4>
+                        <h4><strong>Expiry: </strong>Any future date</h4>
     </div>
+    <div class="content-section-c wow bounceInUp">
+        <div class="reg_page">
 
-    <legend>Create a new account</legend>
-    {% csrf_token %}
-    {{ form|as_bootstrap }}
-    <div class="form-group">
-      <input class="btn btn-primary" id="validate_card_btn" name="commit" type="submit" value="Validate Credit Card">
+                    <form role="form" method="post" id="register-form" enctype="multipart/form-data" action="{% url 'register' %}">
+                        <div id="credit-card-errors" style="display:none">
+                          <div class="alert-message block-message error" id="stripe-error-message"></div>
+                        </div>
+
+
+                            <h1>Create a new account</h1>
+                            {% csrf_token %}
+                            {{ form|as_bootstrap }}
+                        <div class="form-group" style="padding-bottom: 1em;">
+                          <input class="btn btn-primary" id="validate_card_btn" name="commit" type="submit" value="Validate Credit Card">
+                        </div>
+                    </form>
+        </div>
     </div>
-  </form>
 {% endblock %}

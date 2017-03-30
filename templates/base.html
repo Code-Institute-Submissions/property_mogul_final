@@ -20,16 +20,16 @@
     <link href="{% static 'css/custom.css' %}" rel="stylesheet">
 	<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
     <link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
-	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+{#	<link href="{% static 'css/style.css' %}" rel="stylesheet">#}
 	<link href="{% static 'css/animate.css' %}" rel="stylesheet">
 
 	<!-- Magnific Popup core CSS file -->
 	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
 
     <script src="{% static 'js/modernizr-2.8.3.min.js' %}"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{#    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">#}
 
-    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+{#    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">#}
     <link rel="stylesheet" href="{% static 'css/font-awesome-4.7.0/css/font-awesome.css' %}">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -106,9 +106,9 @@
                {% endif %}
 
            {% else %}
-               <li><a href="{% url 'home' %}">Home</a></li>
-               <li><a href="{% url 'register' %}">Register</a></li>
-               <li><a href="{% url 'login' %}">Log In</a></li>
+               <li class="active"><a href="{% url 'home' %}">Home</a></li>
+               <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+               <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
            {% endif %}
     </ul>
 {#       <h1><span class="fui-settings-16 muted">property mogul</span></h1>#}

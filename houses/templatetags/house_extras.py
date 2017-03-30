@@ -13,7 +13,7 @@ def paypal_form_for(house, user):
     else:
         paypal_dict = {
             "business": settings.PAYPAL_RECEIVER_EMAIL,
-            "currency_code": "GBP",
+            "currency_code": "USD",
             "cmd": "_xclick-subscriptions",
             "a3": house.price,
             "p3": 1,
