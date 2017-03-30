@@ -45,9 +45,20 @@
     {% block head_js %}{% endblock %}
 </head>
 <body>
-<div class="container-fluid main">
-   <div class="masthead">
-       <ul class="nav nav-pills pull-right fixed">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<div class="container-fluid">
+<div class="navbar-header">
+      <a class="navbar-brand" href="#">property mogul</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+{#      <li class="active"><a href="#">Home</a></li>#}
+{#      <li><a href="#">Page 1</a></li>#}
+{#      <li><a href="#">Page 2</a></li>#}
+{#      <li><a href="#">Page 3</a></li>#}
+{#    </ul>#}
+
+{#   <div class="masthead">#}
+{#       <ul class="nav nav-pills pull-right fixed">#}
            {% if user.is_authenticated %}
 
                <li><a href="/contact/">Contact</a></li>
@@ -71,7 +82,7 @@
                {% if user.image %}
                <li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false"><img src="/media/{{ user.image }}" style="height: 2em; width: 2em"><span class="caret"></span></a>
+                       aria-expanded="false"><img src="/media/{{ user.image }}" style="height: 1.4em; width: 1.4em"><span class="caret"></span></a>
 					<ul class="dropdown-menu">
 
                             <li><a href="{% url 'profile' %}">Signed in as {{ user.first_name }}</a></li>
@@ -88,10 +99,12 @@
                <li><a href="{% url 'register' %}">Register</a></li>
                <li><a href="{% url 'login' %}">Log In</a></li>
            {% endif %}
-       </ul>
-       <h1><span class="fui-settings-16 muted">property mogul</span></h1>
+    </ul>
+{#       <h1><span class="fui-settings-16 muted">property mogul</span></h1>#}
    </div>
-   <hr>
+</nav>
+<div class="container-fluid main">
+
     {% if messages %}
         <div class="alert alert-success">
             <div class="messages">
@@ -104,7 +117,8 @@
 
        {% block content %}
        {% endblock %}
-   <hr>
+</div>
+
 <div class="footer container-fluid">
         <p>Made By Fully Stacked Philly </p>
 {#        <h3>Social</h3>#}
@@ -115,7 +129,7 @@
         <a href="#"><i class="fa fa-flickr fa-size"> </i> </a>
         </li>
 </div>
-</div>
+
 
 <!-- script references -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
