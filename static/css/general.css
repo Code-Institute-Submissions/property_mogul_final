@@ -1,14 +1,5 @@
 /*General */
 
-
-
-/*body, html {*/
-	/*height: 100%;*/
-	/*width: 100%;*/
-	/*background: #C0E8ED;*/
-	/*overflow-x:hidden;*/
-/*}*/
-
 html {
     position: relative;
     min-height: 100%;
@@ -372,6 +363,10 @@ div.return {
 #circle_black {
     height: 64px;
     width: 64px;
+}
+
+.success {
+	background:url(../img/bubbles.gif)no-repeat left;
 }
 
 .section-heading {
