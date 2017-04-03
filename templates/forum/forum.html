@@ -2,10 +2,11 @@
 {% load threads_extras %}
 {% block content %}
     {% load bootstrap_tags %}
-
+<div class="jumbotron">
     <h1>Hi {{ user.first_name }}!  Welcome to the Property Mogul Forum section</h1>
     <p>Click on a Forum main subject below and get involved</p>
     <p>Features comments section and polls for members to vote on important decisions</p>
+</div>
     {% for subject in subjects %}
         <section class="subject">
             <div class="jumbotron">

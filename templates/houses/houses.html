@@ -2,7 +2,19 @@
 {% load house_extras %}
 {% load bootstrap_tags %}
 {% block content %}
-    <div class="container">
+<div class="container">
+    <div class="jumbotron">
+        <h1>Choose An Investment Option:</h1>
+            <div>
+                <h2 style="color: red;"><strong>In Test Mode</strong></h2>
+                <h4><strong>Choose a purchase: </strong>Click 'Subscribe'</h4>
+                <h4><strong>Use PayPal Login: </strong>philipneeves@gmail.com</h4>
+                <h4><strong>Password: </strong>Penfold01</h4>
+            </div>
+    </div>
+</div>
+    <div class="container content-section-b">
+                <div class="table-responsive">
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -25,5 +37,6 @@
                 {% endfor %}
             </tbody>
         </table>
+                </div>
     </div>
 {% endblock %}

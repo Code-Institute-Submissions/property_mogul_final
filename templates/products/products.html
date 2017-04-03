@@ -1,21 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
     {% load bootstrap_tags %}
-    <div class="container">
+    <div class="container-fluid">
     <div class="jumbotron">
 
             <h1>Choose An Investment Option:</h1>
                     <div>
                         <h2 style="color: red;"><strong>In Test Mode</strong></h2>
                         <h4><strong>Choose a purchase: </strong>Click 'Buy Now'</h4>
-                        <h4><strong>Use PayPal Login: </strong>philipneeves@gmail.com</h4>
-                        <h4><strong>Password: </strong>Penfold01</h4>
+                        <h4><strong>Use PayPal Login: </strong>some.one@gmail.com</h4>
+                        <h4><strong>Password: </strong>Password01</h4>
                     </div>
         </div>
-    </div>
-    <div class="container content-section-b">
+
+    <div class="content-section-c">
+    <div class="container">
                 <div class="table-responsive">
-                    <table class="table table-striped">
+                    <table class="table table-sm">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -38,5 +39,7 @@
                         </tbody>
                     </table>
                 </div>
+    </div>
+    </div>
     </div>
 {% endblock %}

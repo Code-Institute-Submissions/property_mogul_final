@@ -42,7 +42,7 @@
 }
 .owl-controls .owl-page,
 .owl-controls .owl-buttons div{
-	cursor: pointer;
+	cursor: grab;
 }
 .owl-controls {
 	-webkit-user-select: none;

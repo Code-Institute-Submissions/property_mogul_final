@@ -26,8 +26,9 @@
 
 			<div class="row">
 
-				<div class="col-sm-4 wow fadeInDown text-center">
-				  <img class="rotate" src="../static/img/icon/register.svg" alt="Generic placeholder image">
+				<div class="col-sm-4 wow fadeInDown text-center register_home">
+                    <a href="{% url 'register' %}">
+				  <img class="rotate" src="../static/img/icon/register.svg" alt="register">
 				  <h3>Register</h3>
                     <p class="lead">Become a member and gain exclusive access to:</p>
                     <ul class="rego">
@@ -35,7 +36,7 @@
                         <li class="rego">Members Forum</li>
                         <li class="rego">Investment Centre</li>
                     </ul>
-
+                    </a>
 				  <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
 				</div><!-- /.col-lg-4 -->
 
@@ -63,40 +64,6 @@
                 </div>
 
 			</div><!-- /.row -->
-
-{#			<div class="row tworow">#}
-{##}
-{#				<div class="col-sm-4  wow fadeInDown text-center">#}
-{#				  <img class="rotate" src="../static/img/icon/laptop.svg" alt="Generic placeholder image">#}
-{#				  <h3>Responsive</h3>#}
-{#				  <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>#}
-{#				 <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->#}
-{#				</div><!-- /.col-lg-4 -->#}
-{##}
-{#				<div class="col-sm-4 wow fadeInDown text-center">#}
-{#				  <img  class="rotate" src="../static/img/icon/map.svg" alt="Generic placeholder image">#}
-{#				   <h3>Google</h3>#}
-{#				   <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>#}
-{#				   <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->#}
-{#				</div><!-- /.col-lg-4 -->#}
-{##}
-{#				<div class="col-sm-4 wow fadeInDown text-center">#}
-{#				  <img  class="rotate" src="../static/img/icon/browser.svg" alt="Generic placeholder image">#}
-{#				   <h3>Bootstrap</h3>#}
-{#				 <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>#}
-{#				  <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->#}
-{#				</div><!-- /.col-lg-4 -->#}
-{##}
-{#                <div class="col-xs-12 text-center abcen wow fadeIn">#}
-{#                <div class="button_down ">#}
-{#                    <a class="imgcircle wow bounceInUp" data-wow-duration="1.5s"  href="#useit">#}
-{#                        <img class="img_scroll" src="../static/img/icon/circle.png" alt=""> </a>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#			</div><!-- /.row -->#}
-{#		</div>#}
-{#	</div>#}
     </div>
 	<!-- Use it -->
     <div id ="whatis" class="content-section-a">
@@ -172,14 +139,14 @@
 
                 <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">
                     <h3 class="section-heading">Cash Out</h3>
-                    <p class="lead">Get your money back plus profits anytime
-					</p>
+                    <p class="lead">Get your money back plus profits anytime</p>
 
 					<ul class="descp lead2">
 						<li><i class="glyphicon glyphicon-signal"></i> Manage your investments</li>
 						<li><i class="glyphicon glyphicon-home"></i> Reinvest your profits</li>
 						<li><i class="glyphicon glyphicon-euro"></i> Build compound interest</li>
 					</ul>
+                    <p><a href="{% url 'register' %}" class="btn btn-embossed btn-info" role="button">Register Now</a></p>
 				</div>
             </div>
         </div>
@@ -187,19 +154,38 @@
     </div>
 
 	<!-- Screenshot -->
-	<div id="screen" class="content-section-b">
+	<div id="screen" class="content-section-c">
         <div class="container">
           <div class="row" >
 			 <div class="col-md-6 col-md-offset-3 text-center wrap_title ">
 				<h2>Screen Shots</h2>
+                 <p>(click on image to enlarge)</p>
 			 </div>
 		  </div>
 		    <div class="row wow bounceInUp" >
               <div id="owl-demo" class="owl-carousel">
 
-				<a href="../static/img/slide/1.png" class="image-link">
+				<a href="../static/img/slide/subscribe.PNG" class="image-link">
 					<div class="item">
-						<img  class="img-responsive img-rounded" src="../static/img/slide/prop.png" alt="Owl Image">
+						<img  class="img-responsive img-rounded" src="../static/img/slide/subscribe.PNG" alt="Owl Image">
+					</div>
+				</a>
+
+               <a href="../static/img/slide/blogul.png" class="image-link">
+					<div class="item">
+						<img  class="img-responsive img-rounded" src="../static/img/slide/blogul.png" alt="Owl Image">
+					</div>
+				</a>
+
+				<a href="../static/img/slide/invest.PNG" class="image-link">
+					<div class="item">
+						<img  class="img-responsive img-rounded" src="../static/img/slide/invest.PNG" alt="Owl Image">
+					</div>
+				</a>
+
+				<a href="../static/img/slide/subscribe.PNG" class="image-link">
+					<div class="item">
+						<img  class="img-responsive img-rounded" src="../static/img/slide/subscribe.PNG" alt="Owl Image">
 					</div>
 				</a>
 
@@ -209,30 +195,14 @@
 					</div>
 				</a>
 
-				<a href="../static/img/slide/3.png" class="image-link">
+				<a href="../static/img/slide/invest.PNG" class="image-link">
 					<div class="item">
-						<img  class="img-responsive img-rounded" src="../static/img/slide/forum.png" alt="Owl Image">
+						<img  class="img-responsive img-rounded" src="../static/img/slide/invest.PNG" alt="Owl Image">
 					</div>
 				</a>
 
-				<a href="../static/img/slide/1.png" class="image-link">
-					<div class="item">
-						<img  class="img-responsive img-rounded" src="../static/img/slide/prop.png" alt="Owl Image">
-					</div>
-				</a>
-
-               <a href="../static/img/slide/2.png" class="image-link">
-					<div class="item">
-						<img  class="img-responsive img-rounded" src="../static/img/slide/blogul.png" alt="Owl Image">
-					</div>
-				</a>
-
-				<a href="../static/img/slide/3.png" class="image-link">
-					<div class="item">
-						<img  class="img-responsive img-rounded" src="../static/img/slide/forum.png" alt="Owl Image">
-					</div>
-				</a>
               </div>
+                <p><a href="{% url 'register' %}" class="btn btn-embossed btn-info" role="button">Register Now</a></p>
           </div>
         </div>
 
