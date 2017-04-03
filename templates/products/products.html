@@ -2,30 +2,41 @@
 {% block content %}
     {% load bootstrap_tags %}
     <div class="container">
-    <h1>Make a One Off Investment Into One Of the Options below</h1>
-        <div class="table-responsive">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Image</th>
-                        <th>Purchase</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for product in products %}
-                        <tr>
-                            <td>{{ product.name }}</td>
-                            <td>{{ product.description }}</td>
-                            <td>${{ product.price }}</td>
-                            <td><img src="/media/{{ product.image}}" style="height: 100px; width: 100px"></td>
-                            <td>{{ product.paypal_form.sandbox }}</td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+    <div class="jumbotron">
+
+            <h1>Choose An Investment Option:</h1>
+                    <div>
+                        <h2 style="color: red;"><strong>In Test Mode</strong></h2>
+                        <h4><strong>Choose a purchase: </strong>Click 'Buy Now'</h4>
+                        <h4><strong>Use PayPal Login: </strong>philipneeves@gmail.com</h4>
+                        <h4><strong>Password: </strong>Penfold01</h4>
+                    </div>
         </div>
+    </div>
+    <div class="container content-section-b">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Image</th>
+                                <th>Purchase</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for product in products %}
+                                <tr>
+                                    <td>{{ product.name }}</td>
+                                    <td>{{ product.description }}</td>
+                                    <td>${{ product.price }}</td>
+                                    <td><img src="/media/{{ product.image}}" style="height: 100px; width: 100px"></td>
+                                    <td>{{ product.paypal_form.sandbox }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
     </div>
 {% endblock %}

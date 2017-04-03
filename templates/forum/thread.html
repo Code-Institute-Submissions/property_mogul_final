@@ -4,12 +4,15 @@
 {% load emoticons_tags %}
 
 {% block content %}
-    <div class="row header">
-        <div class="container">
-            <h2><strong>Thread: </strong></h2>
-            <h3>{{ thread.name }}</h3>
-            <div class="col-md-12">
-                <table class="table">
+
+    <div class="container content-section-a">
+        <div class="row header">
+        <div class="col-md-6 col-md-offset-3">
+{#            <h1><strong>Thread: </strong></h1>#}
+            <h1><strong>{{ thread.name }}</strong></h1>
+        </div>
+            <div class="col-md-6 col-md-offset-3">
+                <table class="table table-striped">
                     <tbody>
                         <tr>
                             <th>CREATED</th>
@@ -28,33 +31,40 @@
                     </tbody>
                 </table>
             </div>
-    <section class="row comment col-md-9">
-        <div class="col-md-3 comment-profile">
-            <div class="container">
-                {% for post in thread.posts.all %}
-                    <h5>Member: {{ post.user.first_name }}
-                    {% if post.user.image %}
-                    <img src="/media/{{ post.user.image }}" style="height: 2em; width: 2em">
-                    {% endif %}</h5>
-                    <h6>{{ post.user.posts.count }} POSTS</h6>
-                    <p>{{ post.comment | emoticons}}</p>
-
-                {% endfor %}
-
-
-            {% if user.is_authenticated %}
-                <div>
-                <p>
-                    <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">Add Post</a>
-                </p>
-                </div>
         </div>
-            {% endif %}
-        </div>
-    </section>
+    </div>
+    <div><hr></div>
+{#        <section class="row comment col-md-6">#}
+{#            <div class="col-md-3 comment-profile">#}
+{#                <div class="container">#}
+                    {% for post in thread.posts.all %}
+                        <div class=" container content-section-c">
+                            <h5>Member: {{ post.user.first_name }}
+                            {% if post.user.image %}
+                            <img src="/media/{{ post.user.image }}" style="height: 3em; width: 3em">
+                            {% endif %}</h5>
+                            <h6>{{ post.user.posts.count }} POSTS</h6>
+                            <div class="comment-content">
+                                {% autoescape off %}
+                                    {{ post.comment | emoticons }}
+                                {% endautoescape %}
+
+                            </div>
+                        </div>
+                    {% endfor %}
+                    {% if user.is_authenticated %}
+                        <div class="container">
+                            <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">Add Post</a>
+                        </div>
+                    {% endif %}
+
+
+{#    </div>#}
+{#    </div>#}
+{#        </section>#}
             {% if thread.poll %}
-                <div class="container">
-                    <div class="col-md-6">
+
+                    <div class="col-md-6 col-md-offset-3 content-section-c">
                         <h2>Poll</h2>
                         <strong>{{ thread.poll.question }}</strong>
 
@@ -74,17 +84,21 @@
                                     </div>
                                 </div>
                             </div>
+
+
                         {% endfor %}
-                    </div>
-                </div>
+
+
             {% endif %}
+     </div>
+    </div>
+        <div class="col-md-12">
 
 <p>
 {#                    <a href="{% url 'forum' %}" class="btn btn-primary">Return To Forum</a>#}
                     <a href="/forum/" class="btn btn-primary">Return To Forum</a>
                 </p>
-        </div>
-    </div>
+            </div>
 
 
 {% endblock %}

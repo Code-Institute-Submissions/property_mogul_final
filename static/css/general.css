@@ -36,10 +36,11 @@ body {
 	text-align: center;
 }
 
-.descp{
+.descp {
 	margin: 0;
 	padding: 0;
 	line-height: 40px !important;
+	list-style-type: none;
 }
 
 .glyphicon {
@@ -282,7 +283,7 @@ color: #ECEBEB;
 div.transbox {
     height: 100%;
     margin-top: -50px;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
 	padding: 25px;
     /*border: 1px solid black;*/
     opacity: 0.9;
@@ -358,6 +359,7 @@ div.return {
 	background-color: #34495e;
 	color: #FFFFFF;
 	padding: 50px;
+    margin-bottom: 50px;
 }
 
 #circle_black {
@@ -451,7 +453,7 @@ div.return {
 	background: transparent;
 	color: #b09a86;
 	font-weight: 300;
-	font-size: 2.2em;
+	font-size: 0.7em;
 }
 
 .content-style-form input[type="text"]:focus,
