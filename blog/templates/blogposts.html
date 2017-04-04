@@ -1,22 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container-fluid">
+
     <div class="jumbotron">
-{#        <div class="row">#}
-                <h1> property mogul's blogul
+        <div class="container intro-header">
+                <h1> property mogul - the blog
                     <p id="logo" class="lead">follow the trials of crowd-funding property investment</p>
                 </h1>
-{#        </div>#}
+
+        </div>
     </div>
 
-<div class="content-section-c">
-{#    <div class="row">#}
-{#        <div class="col-md-12">#}
-{#            <div class="panel">#}
-{#                <div class="panel-body">#}
+    <div class="container content-section-c">
                     {% for post in posts %}
                         <div class="row">
-                            <hr>
+
                             <div class="col-md-2 col-sm-3 text-center">
                                 <a class="story-img" href="#">
                                     {% if post.image %}
@@ -29,20 +26,20 @@
                                 <div class="row">
                                     <div class="col-xs-9">
                                         <p>{{ post.content | truncatewords:20 }}</p>
-                                        <p><button class="btn btn-default" onclick="location.href={{ post.id }}">Read More</button></p>
-                                        {{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong>
-                                        {{ post.tag }}
-                                        <p><button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">
-                                            New Post</button></p>
+                                        <p>
+                                            <button class="btn btn-default" onclick="location.href= '{{ post.id }}'">Read More</button>
+                                        </p>
+                                        <p>{{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong>
+                                            {{ post.tag }}</p>
+{#                                        <button class="btn btn-default" onclick="location.href='{% url 'new_post' %}'">#}
+{#                                            New Post</button>#}
                                     </div>
                                 </div>
+                                <hr>
                             </div>
-{#                        </div>#}
-{#                        </div>#}
-            </div>
 
-
+                        </div>
     {% endfor %}
-</div>
-</div>
+
+    </div>
 {% endblock %}

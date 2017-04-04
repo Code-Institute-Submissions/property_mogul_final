@@ -3,24 +3,27 @@
 {% block content %}
     {% load bootstrap_tags %}
 <div class="jumbotron">
-    <h1>Hi {{ user.first_name }}!  Welcome to the Property Mogul Forum section</h1>
-    <p>Click on a Forum main subject below and get involved</p>
-    <p>Features comments section and polls for members to vote on important decisions</p>
+    <div class="container intro-header">
+        <h1>Welcome to the Property Mogul Forum</h1>
+        <h4><span class="glyphicon glyphicon-user"></span> Click on a Forum main subject below and get involved</h4>
+        <h4><span class="glyphicon glyphicon-pencil"></span>Add your comments</h4>
+        <h4><span class="glyphicon glyphicon-ok"></span>Vote in polls on important decisions</h4>
+    </div>
 </div>
-    {% for subject in subjects %}
-        <section class="subject">
-            <div class="jumbotron">
-            <h2><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
-            <p>
+                {% for subject in subjects %}
 
-                    {% autoescape off %}
-                        {{ subject.description }}
-                    {% endautoescape %}
+                        <div class="container content-section-c">
+                            <h2><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
+                            <p>
 
-            </p>
+                                    {% autoescape off %}
+                                        {{ subject.description }}
+                                    {% endautoescape %}
 
-            <strong>THREADS</strong> {{ subject.threads.count }} | <strong>POSTS</strong> {{ subject|get_total_subject_posts }}
-            </div>
-        </section>
-    {% endfor %}
+                            </p>
+
+                            <strong>THREADS</strong> {{ subject.threads.count }} | <strong>POSTS</strong> {{ subject|get_total_subject_posts }}
+                        </div>
+
+                {% endfor %}
 {% endblock %}

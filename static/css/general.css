@@ -280,10 +280,10 @@ color: #ECEBEB;
 
 .intro-header {
 	height: 100%; /* Full PAge */
-	padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-	padding-bottom: 50px;
+	padding-top: 4em; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+	padding-bottom: 4.5em;
 	background-color: #C0E8ED;
-	color: #033c73;
+	color: #020069;
 	text-align: center;
 }
 
@@ -381,7 +381,7 @@ div.return {
 	background-color: #34495e;
 	color: #FFFFFF;
 	padding: 50px;
-    margin-bottom: 100px;
+    margin: 20px 20px 70px 20px;
 }
 
 #circle_black {
@@ -390,8 +390,13 @@ div.return {
 }
 
 .success {
-	background:url(../img/bubbles.gif)no-repeat left;
+	background:url(../img/bubbles.gif)no-repeat;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
     padding: 20px;
+	text-align: left;
 }
 
 .section-heading {
@@ -1184,8 +1189,12 @@ div.return {
 		.button_down {display:none}
 
         .success {
-            background:url(../img/bubbles.gif)no-repeat right;
-	        text-align: right;
+            background:url(../img/bubbles.gif) center center;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+	        text-align: left;
 }
 		
 		

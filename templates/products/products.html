@@ -1,22 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
     {% load bootstrap_tags %}
-    <div class="container-fluid">
-    <div class="jumbotron">
 
-            <h1>Choose An Investment Option:</h1>
-                    <div>
-                        <h2 style="color: red;"><strong>In Test Mode</strong></h2>
-                        <h4><strong>Choose a purchase: </strong>Click 'Buy Now'</h4>
-                        <h4><strong>Use PayPal Login: </strong>some.one@gmail.com</h4>
-                        <h4><strong>Password: </strong>Password01</h4>
+        <div class="jumbotron">
+            <div class="container intro-header">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <img class="rotate" src="../../static/img/gift_shop.jpg" alt="gift shop logo"
+                             style="height: 16em; width: 18.75em;">
                     </div>
+                    <div class="col-sm-7">
+                            <div class="text-left">
+                                <h1>The Gift Shop</h1>
+                                <h3 style="color: red;"><strong>In Test Mode</strong></h3>
+                                <h5><strong>Choose a purchase: </strong>Click 'Buy Now'</h5>
+                                <h5><strong>Use PayPal Login: </strong>some.one@gmail.com</h5>
+                                <h5><strong>Password: </strong>Password01</h5>
+                            </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-    <div class="content-section-c">
-    <div class="container">
+        <div class="container content-section-b">
+
                 <div class="table-responsive">
-                    <table class="table table-sm">
+
+                    <table class="table table-striped">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -39,7 +49,6 @@
                         </tbody>
                     </table>
                 </div>
-    </div>
-    </div>
-    </div>
+        </div>
+
 {% endblock %}

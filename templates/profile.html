@@ -1,31 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="success col-sm-12 col-md-offset-1">
-            <h2><strong>Success!</strong></h2>
-                <p>You are logged in as:<strong> {{ user.first_name }} </strong></p>
-                <p>Your stripe id is: <strong>{{ user.stripe_id }}</strong></p>
-                    {% if user.image %}
-                        <img class="img-circle" src="/media/{{ user.image }}" style="height: 100px; width: 110px">
-                    {% endif %}
-        </div>
+    {% load bootstrap_tags %}
+<div class="jumbotron">
+
+    <div class="container intro-header success">
+
+
+                <h2><strong>Success!</strong></h2>
+                    <p>You are logged in as:<strong> {{ user.first_name }} </strong></p>
+                <div>
+                        {% if user.image %}
+                            <img class="img-circle" src="/media/{{ user.image }}" style="height: 6em; width: 6em">
+                        {% endif %}
+                </div>
+                        <p>Welcome to the Members section</p>
+                    <h3>Your stripe id is: <strong>{{ user.stripe_id }}</strong></h3>
+
+
     </div>
 </div>
 
-    <div class="container content-section-b">
-    <div class="row">
-        <div class="col-sm-12 col-md-offset-1">
-    <h2>Subscription Details</h2>
-    <p>You have {{ user.subscription_end|timeuntil}} left on your subscription</p>
-    <p>To cancel your subscription click 'Cancel Subscription' below</p>
-    <p>
-        <a href="{% url "cancel_subscription" %}"
-           onclick="return cancelSubscriptionCheck();"
-           class="btn btn-danger">Cancel Subscription</a>
-    </p>
-    </div>
-    </div>
+    <div class="container content-section-c">
+        <div class="row">
+            <div class="col-sm-12 col-md-offset-1">
+                <h2>Subscription Details</h2>
+                <p>You have {{ user.subscription_end|timeuntil}} left on your subscription</p>
+                <p>To cancel your subscription click 'Cancel Subscription' below</p>
+                <p>
+                    <a href="{% url "cancel_subscription" %}"
+                       onclick="return cancelSubscriptionCheck();"
+                       class="btn btn-danger">Cancel Subscription</a>
+                </p>
+            </div>
+        </div>
     </div>
 
     <script type="text/javascript">

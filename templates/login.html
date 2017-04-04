@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% load bootstrap_tags %}
 {% block content %}
+    <div class="intro-header text-left">
     <div class="row">
-        <div class="col-sm-6 block wow bounceIn">
+        <div class="col-sm-6 col-md-offset-2 block wow bounceIn">
             <form role="form" method="post" action="{% url 'login' %}">
                 <legend>Login</legend>
                 {% csrf_token %}
@@ -12,5 +13,6 @@
                 </div>
             </form>
         </div>
+    </div>
     </div>
 {% endblock %}
