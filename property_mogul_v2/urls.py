@@ -19,7 +19,7 @@ from members import views as members_views
 from home import views as home_views
 from paypal.standard.ipn import urls as paypal_urls
 from paypal_store import views as paypal_views
-from .settings import MEDIA_ROOT
+from settings.base import MEDIA_ROOT
 from products import views as product_views
 from houses import views as house_views
 from django.views.static import serve
