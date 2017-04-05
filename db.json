@@ -888,7 +888,7 @@
     "model": "blog.post",
     "pk": 1,
     "fields": {
-        "author": 10,
+        "author": 13,
         "title": "The Property Game",
         "content": "There are winners and losers but if you play your cards right you can become a Property Mogul.  Follow me as I take you on the journey of success.\r\nThe best part is you only need \u20ac100 minimum to start winning.\r\nGet involved or go home.",
         "created_date": "2017-03-23T11:07:59.341Z",
