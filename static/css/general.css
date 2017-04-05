@@ -15,8 +15,7 @@ body {
 
 .main {
 	padding: 20px;
-	margin-top: 60px;
-	/*background-color: #C0E8ED;*/
+	margin-top: 50px;
     background-color: #0e0069;
 }
 
@@ -283,8 +282,8 @@ color: #ECEBEB;
 	height: 100%; /* Full PAge */
 	padding-top: 4em; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
 	padding-bottom: 4.5em;
-	background-color: #C0E8ED;
-	color: #020069;
+	background-color: #020069;
+	color: #C0E8ED;
 	text-align: center;
 }
 
@@ -384,6 +383,7 @@ div.return {
 	background-color: #34495e;
 	color: #FFFFFF;
     margin-bottom: 70px;
+    padding: 20px;
 }
 
 #circle_black {
@@ -399,6 +399,7 @@ div.return {
       background-size: cover;
     padding: 20px;
 	text-align: left;
+	color: #020069;
 }
 
 .section-heading {
@@ -1190,7 +1191,7 @@ div.return {
 		
 		.button_down {display:none}
 
-        .success {
+        .success_page {
             background:url(../img/bubbles.gif) center center;
               -webkit-background-size: cover;
               -moz-background-size: cover;
