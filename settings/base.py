@@ -12,7 +12,7 @@ SECRET_KEY = '!g&fmt__a@)dv$5y73(+&w3n9k=kj($v54((@7_w-m2=%3q)ea'
 
 PAYPAL_NOTIFY_URL = 'http://da4abb68.ngrok.io/a-really-hard-to-guess-url/'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'http://da4abb68.ngrok.io/', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'http://da4abb68.ngrok.io/', 'localhost', 'property-mogul.herokuapp.com']
 
 
 AUTH_USER_MODEL = 'members.User'
