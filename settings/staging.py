@@ -1,4 +1,5 @@
 from base import *
+import dj_database_url
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -13,6 +14,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+DATABASES['default'] = dj_database_url.config("mysql://b47891a63528a0:144df2ac@eu-cdbr-west-01.cleardb.com/heroku_b2d78d537b51a5c")
 
 # Stripe environment variables
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_jMrqEWUObXQYcsowwHCjDJ2E')
