@@ -739,7 +739,7 @@
         "user_permissions": []
     }
 },
-{
+    {
     "model": "ipn.paypalipn",
     "pk": 1,
     "fields": {
@@ -786,8 +786,6 @@
         "num_cart_items": 0,
         "option_name1": "",
         "option_name2": "",
-        "option_selection1": "",
-        "option_selection2": "",
         "payer_status": "verified",
         "payment_date": null,
         "payment_gross": "0.00",
@@ -905,8 +903,6 @@
         "num_cart_items": 0,
         "option_name1": "",
         "option_name2": "",
-        "option_selection1": "",
-        "option_selection2": "",
         "payer_status": "verified",
         "payment_date": "2017-03-22T16:34:07Z",
         "payment_gross": "1900.00",
@@ -1024,8 +1020,6 @@
         "num_cart_items": 0,
         "option_name1": "",
         "option_name2": "",
-        "option_selection1": "",
-        "option_selection2": "",
         "payer_status": "verified",
         "payment_date": null,
         "payment_gross": "0.00",
@@ -1143,8 +1137,6 @@
         "num_cart_items": 0,
         "option_name1": "",
         "option_name2": "",
-        "option_selection1": "",
-        "option_selection2": "",
         "payer_status": "verified",
         "payment_date": "2017-03-22T16:34:07Z",
         "payment_gross": "1900.00",
@@ -1262,8 +1254,6 @@
         "num_cart_items": 0,
         "option_name1": "",
         "option_name2": "",
-        "option_selection1": "",
-        "option_selection2": "",
         "payer_status": "verified",
         "payment_date": null,
         "payment_gross": "0.00",
