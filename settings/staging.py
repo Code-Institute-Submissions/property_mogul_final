@@ -21,6 +21,10 @@ CLEAR_DB_URL = os.environ.get("CLEARDB_DATABASE_URL", "")
 
 DATABASES['default'] = dj_database_url.parse(CLEAR_DB_URL)
 
+DISQUS_API_KEY = 'u7YpjuXW788cwHNjDlKu0n4zpYQozxqN1BE6yOpxjQwddBs5wYtUYTFs92C2zN5I'
+DISQUS_WEBSITE_SHORTNAME = 'BlogApp'
+SITE_ID = 1
+
 # Stripe environment variables
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_jMrqEWUObXQYcsowwHCjDJ2E')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_lBEnGIqQGKUW4nXQh05GkxLE')
