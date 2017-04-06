@@ -14,8 +14,8 @@ DATABASES = {
     }
 }
 
-DISQUS_API_KEY = 'u7YpjuXW788cwHNjDlKu0n4zpYQozxqN1BE6yOpxjQwddBs5wYtUYTFs92C2zN5I'
-DISQUS_WEBSITE_SHORTNAME = 'BlogApp'
+# DISQUS_API_KEY = 'u7YpjuXW788cwHNjDlKu0n4zpYQozxqN1BE6yOpxjQwddBs5wYtUYTFs92C2zN5I'
+DISQUS_WEBSITE_SHORTNAME = 'nielsstackblog'
 SITE_ID = 1
 
 # Stripe environment variables
