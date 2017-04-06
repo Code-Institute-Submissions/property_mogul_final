@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'blog',
     'django.contrib.sites',
     'disqus',
+    'django-disqus',
     'tinymce',
     'emoticons',
     'threads',
