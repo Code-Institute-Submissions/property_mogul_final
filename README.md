@@ -45,4 +45,13 @@ This app allows users to register as a member using Stripe Monthly subscription 
 ### Some of the tech used includes:
 - [Django](https://www.djangoproject.com/)
 	- Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design
-- Further tech details coming soon!
+- [Arrow](https://pypi.python.org/pypi/arrow)
+	- Arrow is a Python library that offers a sensible, human-friendly approach to creating, manipulating, formatting and converting dates, times, and timestamps
+- [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/)
+	- Beautiful Soup is a Python library for pulling data out of HTML and XML files
+- [TinyMCE](https://www.tinymce.com/)
+	- (Tiny Moxiecode Content Editor) is a platform-independent, browser-based WYSIWYG editor control, written in JavaScript and has the ability to convert HTML textarea fields or other HTML elements to editor instances.  It is used here for users to format their posts easily
+- [Pillow](https://python-pillow.org/)
+	- Python Imaging Library (PIL or Pillow) is a Python library that adds support for opening, manipulating, and saving many different image file formats
+- [Bootstrap](http://getbootstrap.com/)
+	- We use **Bootstrap** to give our project a simple, responsive layout
