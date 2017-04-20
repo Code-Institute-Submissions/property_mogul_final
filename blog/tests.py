@@ -4,8 +4,7 @@ from .models import Post
 
 class PostTests(TestCase):
     """
-    Here we'll define the tests
-    that we'll run against our Post model
+    Test for the Blog Post model
     """
 
     def test_str(self):
