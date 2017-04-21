@@ -1223,6 +1223,9 @@ div.return {
               -o-background-size: cover;
               background-size: cover;
 	        text-align: left;
+            padding: 20px;
+	        text-align: left;
+	        color: #020069;
         }
 
         .reg_page {
