@@ -234,43 +234,43 @@ background: #1abc9c !important;
 }
 
 /* Nav */
-.navbar {
-	position: relative;
-	min-height: 60px;
-	margin-bottom: 0; 
-	width: 100%;
-	z-index: 999;
-	border-radius: 0; 
-}
+/*.navbar {*/
+	/*position: relative;*/
+	/*min-height: 60px;*/
+	/*margin-bottom: 0; */
+	/*width: 100%;*/
+	/*z-index: 999;*/
+	/*border-radius: 0; */
+/*}*/
 
-.navbar-default {
-	position: relative;
-	min-height: 60px;
-	width: 100%;
-	z-index: 999;
-	
-}
+/*.navbar-default {*/
+	/*position: relative;*/
+	/*min-height: 60px;*/
+	/*width: 100%;*/
+	/*z-index: 999;*/
+	/**/
+/*}*/
 
-.navbar-default .navbar-nav>li>a {
-color: #ffffff;
-}
+/*.navbar-default .navbar-nav>li>a {*/
+/*color: #ffffff;*/
+/*}*/
 
-.navbar-default .navbar-nav>li>a:hover {
-color: #ECEBEB;
-}
+/*.navbar-default .navbar-nav>li>a:hover {*/
+/*color: #ECEBEB;*/
+/*}*/
 
-.navbar-default .navbar-brand {
-color: #ffffff;
-}
-.navbar-default .navbar-brand:hover {
-color: #ECEBEB;
-}
+/*.navbar-default .navbar-brand {*/
+/*color: #ffffff;*/
+/*}*/
+/*.navbar-default .navbar-brand:hover {*/
+/*color: #ECEBEB;*/
+/*}*/
 
-.navbar-brand {
-	font-family: arvo;
-	letter-spacing: 3px;
-	font-weight: 400 !important;
-}
+/*.navbar-brand {*/
+	/*font-family: arvo;*/
+	/*letter-spacing: 3px;*/
+	/*font-weight: 400 !important;*/
+/*}*/
 
 .lead {
 	font-size: 16px;
