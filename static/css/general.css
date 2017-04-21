@@ -10,6 +10,11 @@ body {
     min-height: 100%;
     margin-bottom: 80px;
 	overflow-x:hidden;
+    font-family: Arvo, serif;
+}
+
+.navbar {
+    background-color: #C0E8ED;
 }
 
 .main {
