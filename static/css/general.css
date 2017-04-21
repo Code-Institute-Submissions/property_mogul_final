@@ -116,8 +116,11 @@ margin: auto;
     text-decoration: none;
 }
 
-.jumbotron.product-table {
+.product-table {
+    padding: 30px;
     margin-bottom: 100px;
+    color: inherit;
+    background-color: #eee;
 }
 
 /*own carousel */
