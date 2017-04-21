@@ -1141,28 +1141,34 @@ div.return {
 -------------------------------------------------------------------------------*/
 
 /* 960 Screens */
-@media only screen and (min-width: 960px) and (max-width: 1250px) {
-	
-}
-@media only screen and (min-width: 768px) and (max-width: 820px) {
-	
-}
-/* Tablet */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-	
-		h1, .h1 {
-			font-size: 50px;
-		}
-		
-		h3, .h3 {
-			font-size: 20px;
-		}
-		
-}
+/*@media only screen and (min-width: 960px) and (max-width: 1250px) {*/
+	/**/
+/*}*/
+/*@media only screen and (min-width: 768px) and (max-width: 820px) {*/
+	/**/
+/*}*/
+/*!* Tablet *!*/
+/*@media only screen and (min-width: 768px) and (max-width: 959px) {*/
+	/**/
+		/*h1, .h1 {*/
+			/*font-size: 50px;*/
+		/*}*/
+		/**/
+		/*h3, .h3 {*/
+			/*font-size: 20px;*/
+		/*}*/
+		/**/
+/*}*/
 
 
 /* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {
+
+        .main {
+            margin-top: -20px;
+            background-color: #0e0069;
+        }
+
 		.intro-header {
 			height: 100%;
 			padding-top: 50px;
@@ -1173,10 +1179,20 @@ div.return {
 			text-align: center;
 		}
 
-        .main {
-            margin-top: -20px;
-            background-color: #0e0069;
-}
+        .content-section-a {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        .content-section-b {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        .content-section-c {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
 		
 		h1, .h1 {
 			font-size: 2em;
@@ -1200,13 +1216,12 @@ div.return {
               -o-background-size: cover;
               background-size: cover;
 	        text-align: left;
-}
+        }
+
         .reg_page {
 	        width: 100%;
             padding: 1em;
-}
-
-		
+        }
 		
 	}
 
@@ -1290,12 +1305,12 @@ div.return {
 	/*}*/
 /*}*/
 
-@media (max-width: 1199px) {
-	ul.banner-social-buttons {
-		float: left;
-		margin-top: 15px;
-	}	
-}
+/*@media (max-width: 1199px) {*/
+	/*ul.banner-social-buttons {*/
+		/*float: left;*/
+		/*margin-top: 15px;*/
+	/*}	*/
+/*}*/
 
 /*@media (max-width: 767px) {*/
 	/*.banner h2 {*/
