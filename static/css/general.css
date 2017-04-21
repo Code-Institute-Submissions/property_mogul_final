@@ -116,7 +116,7 @@ margin: auto;
     text-decoration: none;
 }
 
-.jumbotron>.product-table {
+.jumbotron.product-table {
     margin-bottom: 100px;
 }
 
