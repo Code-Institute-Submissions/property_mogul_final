@@ -1171,10 +1171,9 @@ div.return {
 /* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {
 
-        .main {
-            margin-top: -20px;
-            background-color: #0e0069;
-        }
+        /*.main {*/
+            /*background-color: #0e0069;*/
+        /*}*/
 
 		.intro-header {
 			height: 100%;
@@ -1182,7 +1181,6 @@ div.return {
 			padding-bottom: 50px;
 			background-color: #0e0069;
 			color: #C0E8ED;
-			/*background-size: cover;*/
 			text-align: center;
 		}
 
