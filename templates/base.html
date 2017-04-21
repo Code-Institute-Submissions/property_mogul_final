@@ -10,8 +10,9 @@
 
     <!-- Custom Google Web Font -->
     <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
-    <link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-	<link href='//fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+{#    <link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,#}
+{#    900italic' rel='stylesheet' type='text/css'>#}
+{#	<link href='//fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>#}
 
     <!-- Custom CSS-->
     <link href="{% static 'css/general.css' %}" rel="stylesheet">
@@ -27,10 +28,10 @@
 
     <script src="{% static 'js/modernizr-2.8.3.min.js' %}"></script>
 
-    <link rel="stylesheet" href="{% static 'css/font-awesome-4.7.0/css/font-awesome.css' %}">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+{#    <link rel="stylesheet" href="{% static 'css/font-awesome-4.7.0/css/font-awesome.css' %}">#}
+{##}
+{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>#}
+{#    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>#}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
@@ -63,8 +64,6 @@
     <ul class="nav navbar-nav navbar-right">
 
            {% if user.is_authenticated %}
-
-               <li><a href="/contact/">Contact</a></li>
 
                <li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -108,6 +107,7 @@
                <li class="active"><a href="{% url 'home' %}">Home</a></li>
                <li><a href="{% url 'register' %}"><span class="glyphicon glyphicon-user"></span> Register</a></li>
                <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+               <li><a href="/contact/">Contact</a></li>
            {% endif %}
     </ul>
 {#       <h1><span class="fui-settings-16 muted">property mogul</span></h1>#}
@@ -143,7 +143,7 @@
 
 
 <!-- script references -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+{#<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>#}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js">
 </script>
 <!-- JavaScript -->
@@ -151,17 +151,17 @@
 {#    <script src="{% static 'js/bootstrap.js' %}"></script>#}
 	<script src="{% static 'js/owl.carousel.js' %}"></script>
 	<script src="{% static 'js/script.js' %}"></script>
-	<!-- StikyMenu -->
-	<script src="{% static 'js/stickUp.min.js' %}"></script>
-	<script type="text/javascript">
-	  jQuery(function($) {
-		$(document).ready( function() {
-		  $('.navbar-default').stickUp();
-
-		});
-	  });
-
-	</script>
+	<!-- StickyMenu -->
+{#	<script src="{% static 'js/stickUp.min.js' %}"></script>#}
+{#	<script type="text/javascript">#}
+{#	  jQuery(function($) {#}
+{#		$(document).ready( function() {#}
+{#		  $('.navbar-default').stickUp();#}
+{##}
+{#		});#}
+{#	  });#}
+{##}
+{#	</script>#}
 	<!-- Smoothscroll -->
 	<script type="text/javascript" src="{% static 'js/jquery.corner.js' %}"></script>
 	<script src="{% static 'js/wow.min.js' %}"></script>
