@@ -22,29 +22,29 @@
             </div>
         </div>
 <div class="jumbotron">
-        <div class="content-section-b">
-                    <table class="table table-striped hp-table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Description</th>
-                                <th>Price</th>
-                                <th>Image</th>
-                                <th>Purchase</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% for product in products %}
-                                <tr>
-                                    <td>{{ product.name }}</td>
-                                    <td>{{ product.description }}</td>
-                                    <td>${{ product.price }}</td>
-                                    <td><img src="/media/{{ product.image}}" style="height: 100px; width: 100px"></td>
-                                    <td>{{ product.paypal_form.sandbox }}</td>
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
+        <div>
+            <table class="table table-striped hp-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Image</th>
+                        <th>Purchase</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                        <tr>
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.description }}</td>
+                            <td>${{ product.price }}</td>
+                            <td><img src="/media/{{ product.image}}" style="height: 100px; width: 100px"></td>
+                            <td>{{ product.paypal_form.sandbox }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
 </div>
 {% endblock %}
