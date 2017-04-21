@@ -116,6 +116,10 @@ margin: auto;
     text-decoration: none;
 }
 
+.jumbotron>.product-table {
+    margin-bottom: 100px;
+}
+
 /*own carousel */
 
 #owl-demo .item{
