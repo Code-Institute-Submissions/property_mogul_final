@@ -421,10 +421,6 @@ div.return {
 	background-size: cover;
 }
 
-.product-table {
-    margin-bottom: 15em;
-}
-
 /* Animate */
 .rotate{
     -webkit-transition-duration: 0.8s;
