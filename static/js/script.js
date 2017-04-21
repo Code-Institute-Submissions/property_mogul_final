@@ -1,12 +1,4 @@
-/*
-Theme: Flatfy Theme
-Author: Andrea Galanti
-Bootstrap Version 
-Build: 1.0
-http://www.andreagalanti.it
-*/
-
-$(window).load(function() { 
+$(window).load(function() {
 	//Preloader 
 	$('#status').delay(300).fadeOut(); 
 	$('#preloader').delay(300).fadeOut('slow');
@@ -51,7 +43,7 @@ $(document).ready(function() {
 			  singleItem:true
 		});
 
-		//SmothScroll
+		//SmoothScroll
 		$('a[href*=#]').click(function() {
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
 			&& location.hostname == this.hostname) {
