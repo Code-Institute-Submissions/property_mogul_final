@@ -95,7 +95,6 @@ margin: auto;
     text-align: left;
 }
 
-
 .register_home>a:link {
     color: #C0E8ED;
     background-color: transparent;
@@ -420,6 +419,10 @@ div.return {
 	color: #f8f8f8;
 	background: url(../img/intro/banner-bg.jpg) no-repeat center center;
 	background-size: cover;
+}
+
+.product-table {
+    margin-bottom: 15em;
 }
 
 /* Animate */

@@ -24,30 +24,30 @@
                 </div>
         </div>
     </div>
-    <div class="jumbotron">
-    <div>
-        <table class="table table-striped hp-table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Image</th>
-                    <th>Subscribe</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for house in houses %}
+    <div class="jumbotron product-table">
+        <div>
+            <table class="table table-striped hp-table">
+                <thead>
                     <tr>
-                        <td>{{ house.name }}</td>
-                        <td>{{ house.description }}</td>
-                        <td>${{ house.price }}</td>
-                        <td><img src="/media/{{ house.image }}" style="height: 100px; width: 100px"></td>
-                        <td>{% paypal_form_for house user %}</td>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Image</th>
+                        <th>Subscribe</th>
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
+                </thead>
+                <tbody>
+                    {% for house in houses %}
+                        <tr>
+                            <td>{{ house.name }}</td>
+                            <td>{{ house.description }}</td>
+                            <td>${{ house.price }}</td>
+                            <td><img src="/media/{{ house.image }}" style="height: 100px; width: 100px"></td>
+                            <td>{% paypal_form_for house user %}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
 {% endblock %}
