@@ -725,12 +725,16 @@ Style for form modal
 		white-space: nowrap;
 	}
 
+    .hp-table td:nth-of-type(1) {
+		font-weight: bold;
+	}
+
 	.hp-table td:nth-of-type(2):before {
 		content: "Description:";
 		font-weight: bold;
 	}
 	.hp-table td:nth-of-type(3):before {
-		content: "Investment Per Month:";
+		content: "Price:";
 		font-weight: bold;
 	}
 		
