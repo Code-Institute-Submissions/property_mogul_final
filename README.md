@@ -58,7 +58,7 @@ This app allows users to register as a member using Stripe Monthly subscription 
 
 ## Acknowledgements
 
-### Some of the UI is thanks to the freely available Flatfly Theme by [Andrea Galanti](http://andreagalanti.it/portfolio/flatfy-theme/)
+### Some of the UI is thanks to the freely available Flatfy Theme by [Andrea Galanti](http://andreagalanti.it/portfolio/flatfy-theme/)
 - I highly modified the theme, mainly for the landing page, which in turn uses the below:
 - [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
 	- a responsive lightbox & dialog script with focus on performance and providing best experience for users with any device
