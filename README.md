@@ -58,7 +58,7 @@ This app allows users to register as a member using Stripe Monthly subscription 
 
 ## Testing
 
-- A number of tests were conducting using Django's testing framework and can be viewed in the associated tests.py files for each app
+- A number of tests were conducting using Django's testing framework and can be viewed in the associated tests.py files
 - Extensive in-browser testing was also utilised throughout its development
 
 ## Acknowledgements
