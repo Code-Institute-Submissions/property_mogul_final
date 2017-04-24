@@ -55,3 +55,16 @@ This app allows users to register as a member using Stripe Monthly subscription 
 	- Python Imaging Library (PIL or Pillow) is a Python library that adds support for opening, manipulating, and saving many different image file formats
 - [Bootstrap](http://getbootstrap.com/)
 	- We use **Bootstrap** to give our project a simple, responsive layout
+
+## Acknowledgements
+
+### Some of the UI is thanks to the freely available Flatfly Theme by [Andrea Galanti](http://andreagalanti.it/portfolio/flatfy-theme/)
+- I highly modified the theme, mainly for the landing page, which in turn uses the below:
+- [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)
+	- a responsive lightbox & dialog script with focus on performance and providing best experience for users with any device
+	- used here for the Screenshot Carousel allowing users to click on and enlarge individual screenshots
+- [Animate.css](https://daneden.github.io/animate.css/)
+	- used here for a number of CSS3 animations throughout the project
+- [jQuery Morph Button](http://www.jqueryscript.net/lightbox/jQuery-Plugin-For-Popup-Window-with-Morphing-Button-Morph-Button.html)
+	- Morph Button is a small jQuery modal plugin that reveals any HTML content by morphing the action button using CSS3 animations
+	- used here for the Contact Form to 'morph' out when the button is clicked
