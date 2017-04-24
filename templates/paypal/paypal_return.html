@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-    <P><strong>Invoice no.:</strong> {{ post.invoice }}</P>
-    <h1>Congratulations {{ post.first_name }} you have successfully purchased '{{ post.item_name }}'</h1>
+    <div class="container">
+        <P class="text-white"><strong>Invoice no.:</strong> {{ post.invoice }}</P>
+        <h1 class="text-white">Congratulations {{ post.first_name }} you have successfully purchased '{{ post.item_name }}'</h1>
 
 
-    <h3>${{ post.payment_gross }} has been paid to {{ post.business }}</h3>
-        <h4><strong>Your payment status is:</strong> {{ post.payment_status }}</h4>
+        <h3 class="text-white">${{ post.payment_gross }} has been paid to {{ post.business }}</h3>
+        <h4 class="text-white"><strong>Your payment status is:</strong> {{ post.payment_status }}</h4>
 
-<div class="content-section-c return">
-        </div>
+    <div class="content-section-c return">
+    </div>
 </div>
 {% endblock %}
