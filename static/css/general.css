@@ -149,20 +149,6 @@ emphasise main registration link
 	margin:-100px 0 0 -100px; /* is width and height divided by two */
 }
 
-/***
-footer social media links
-***/
-.social {
-	font-size: 30px;
-	text-decoration: none;
-	list-style-type: none;
-	color: #1abc9c; 
-}
-
-.social > a:hover {
-	color: #1abc9c; 
-}
-
 .owl-theme .owl-controls .owl-page span {
 background: #1abc9c !important;
 }
@@ -195,6 +181,10 @@ background: #1abc9c !important;
     padding-left: 6em;
 	padding-top: 10px;
 	text-align: left;
+}
+
+.text-white {
+    color: #FFFFFF;
 }
 
 div.return {
@@ -646,6 +636,20 @@ Style for form modal
 .no-transition {
 	-webkit-transition: none !important;
 	transition: none !important;
+}
+
+/***
+footer social media links
+***/
+.social {
+	font-size: 30px;
+	text-decoration: none;
+	list-style-type: none;
+	color: #1abc9c;
+}
+
+.social > a:hover {
+	color: #1abc9c;
 }
 
 /* All Mobile Sizes (devices and browser) */

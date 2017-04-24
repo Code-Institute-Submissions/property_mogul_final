@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-offset-2 block wow bounceIn">
             <form role="form" method="post" action="{% url 'login' %}">
-                <legend style="color: #FFFFFF">Login</legend>
+                <legend class="text-white">Login</legend>
                 {% csrf_token %}
                 {{ form| as_bootstrap }}
                 <div class="form-group">
