@@ -56,6 +56,11 @@ This app allows users to register as a member using Stripe Monthly subscription 
 - [Bootstrap](http://getbootstrap.com/)
 	- We use **Bootstrap** to give our project a simple, responsive layout
 
+## Testing
+
+- A number of tests were conducting using Django's testing framework and can be viewed in the associated tests.py files for each app
+- Extensive in-browser testing was also utilised throughout its development
+
 ## Acknowledgements
 
 ### Some of the UI is thanks to the freely available Flatfy Theme by [Andrea Galanti](http://andreagalanti.it/portfolio/flatfy-theme/)
